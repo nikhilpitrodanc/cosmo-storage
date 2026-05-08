@@ -225,7 +225,7 @@ button {
   }
 
   h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
     line-height: 1.2 !important;
     margin-top: 1rem !important;
   }
@@ -236,6 +236,14 @@ button {
 
   section {
     padding: 8rem 5% 4rem 5% !important;
+    justify-content: center !important;
+  }
+
+  section:first-of-type {
+    justify-content: flex-start !important;
+    padding-top: 11rem !important;
+    height: auto !important;
+    min-height: 100vh !important;
   }
 
   .steps-grid {
