@@ -264,23 +264,6 @@ const AuthPage = () => {
             </button>
           </p>
 
-          <div style={{ marginTop: '1.5rem' }}>
-            <button 
-              onClick={handleFinalize}
-              style={{ 
-                background: 'rgba(255,255,255,0.05)', 
-                color: 'var(--text-muted)', 
-                padding: '0.5rem 1rem', 
-                borderRadius: '0.5rem',
-                fontSize: '0.75rem',
-                cursor: 'pointer',
-                border: '1px solid rgba(255,255,255,0.1)',
-                width: '100%'
-              }}
-            >
-              🚀 Skip to Dashboard (Bypass for Testing)
-            </button>
-          </div>
         </div>
       </motion.div>
 
