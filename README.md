@@ -93,4 +93,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌌 Join the Security Revolution
 Cosmo Storage isn't just a vault; it's a digital universe. Designed to protect your data with beauty and brawn.
 
-**Developed with ❤️ by [Nikhil Pitroda](https://github.com/nikhilpitrodanc)**
