@@ -5,7 +5,10 @@ const CosmosBackground = () => {
   const icons = [Folder, FileImage, Video, FileText, Cpu];
 
   const particles = useMemo(() => {
-    return [...Array(160)].map((_, i) => {
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? 80 : 160;
+    
+    return [...Array(count)].map((_, i) => {
       const isElement = i % 10 === 0;
       const IconComponent = isElement ? icons[Math.floor(Math.random() * icons.length)] : null;
       return {
@@ -36,7 +39,7 @@ const CosmosBackground = () => {
           }}
         >
           {p.isElement ? (
-            <div style={{ color: 'var(--secondary)', filter: 'drop-shadow(0 0 10px var(--secondary))', opacity: 0.9 }}>
+            <div style={{ color: 'var(--secondary)', filter: 'drop-shadow(0 0 10px var(--secondary))', opacity: 0.2 }}>
               <p.IconComponent size={p.size} />
             </div>
           ) : (
@@ -47,7 +50,7 @@ const CosmosBackground = () => {
                 background: 'white',
                 borderRadius: '50%',
                 boxShadow: '0 0 8px white',
-                opacity: 0.8
+                opacity: 0.5
               }}
             />
           )}

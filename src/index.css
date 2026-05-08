@@ -196,3 +196,43 @@ button {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .glass-card {
+    backdrop-filter: blur(20px) saturate(180%) brightness(100%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(100%);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  body {
+    cursor: auto; /* Show native cursor on mobile for better accessibility */
+  }
+
+  .gradient-text {
+    display: inline-block;
+  }
+
+  /* Alignment fixes */
+  nav {
+    padding: 1rem 5% !important;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+
+  section {
+    padding: 4rem 5% !important;
+  }
+
+  .steps-grid {
+    gap: 1.5rem !important;
+  }
+}
