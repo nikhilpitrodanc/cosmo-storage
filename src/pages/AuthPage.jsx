@@ -57,7 +57,7 @@ const AuthPage = () => {
       setTimeout(() => {
         setIsLoading(false);
         if (mode === 'signup') {
-          const code = Math.floor(100000 + Math.random() * 900000).toString();
+          const code = Math.floor(10000000 + Math.random() * 90000000).toString();
           setSentOtp(code);
           setToast({ message: `[SIM] Signup OTP is: ${code}`, type: 'warning' });
           setStep(step + 1);
@@ -194,7 +194,7 @@ const AuthPage = () => {
               <div style={inputGroup}>
                 <label style={labelStyle}>Email Verification</label>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-                  Enter the 6-digit code sent to {email}
+                  Enter the 8-digit code sent to {email}
                 </p>
                 <div style={inputWrapper}>
                   <Smartphone size={18} color="var(--text-muted)" />
@@ -203,7 +203,7 @@ const AuthPage = () => {
                     placeholder="Enter Code" 
                     style={{ ...inputStyle, textAlign: 'center', letterSpacing: '4px' }}
                     value={otp}
-                    onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                    onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 8))}
                   />
                 </div>
               </div>
@@ -211,7 +211,7 @@ const AuthPage = () => {
                 className="btn-primary" 
                 style={{ width: '100%', marginTop: '1rem' }}
                 onClick={handleVerifyStep}
-                disabled={isLoading || otp.length < 6}
+                disabled={isLoading || otp.length < 8}
               >
                 {isLoading ? 'Verifying...' : 'Verify Code'}
               </button>
